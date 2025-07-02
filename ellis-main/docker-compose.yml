@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ellis-app
+    container_name: ellis_app
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app
+    environment:
+      - PYHTONUNBUFFERED=1
